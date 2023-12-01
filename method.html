@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Method Page</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .video-container {
+      max-width: 800px;
+      margin-bottom: 20px;
+    }
+
+    .video-container video {
+      width: 100%; /* Make the video responsive */
+      height: auto;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .button-container button {
+      background-color: #3498db;
+      color: #fff;
+      font-size: 18px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button-container button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-container">
+    <div class="video-container">
+      <video controls autoplay loop>
+        <source src="videoes/Memory Game.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="button-container">
+      <button id="play-game-button">Play the Game</button>
+      <button id="skip-video-button">How to Play</button>
+    </div>
+  </div>
+  
+  <script>
+    // Add click event listeners to the buttons
+    const playGameButton = document.getElementById('play-game-button');
+    playGameButton.addEventListener('click', () => {
+      // Redirect to the memory game page 
+      window.location.href = 'index.html';
+    });
+
+    const skipVideoButton = document.getElementById('skip-video-button');
+    skipVideoButton.addEventListener('click', () => {
+      // Redirect to the intoduction of game page 
+      window.location.href = 'introduction.html';
+    });
+  </script>
+</body>
+</html>

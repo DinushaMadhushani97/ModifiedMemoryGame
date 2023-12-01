@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .home-container {
+      text-align: center;
+    }
+
+    #play-button {
+      background-color: #3498db;
+      color: #fff;
+      font-size: 18px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #play-button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <div class="home-container">
+    <h1>Welcome to the Memory Game</h1>
+    <p>Test your memory skills and have fun!</p>
+    <button id="play-button">Play Game</button>
+  </div>
+
+  <script>
+    // Add a click event listener to the "Play Game" button
+    const playButton = document.getElementById('play-button');
+    playButton.addEventListener('click', () => {
+      // Redirect to the memory game page
+      window.location.href = 'method.html';
+    });
+  </script>
+</body>
+</html>

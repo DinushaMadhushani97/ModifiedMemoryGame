@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Game Introduction</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Introduction content -->
+  <div class="introduction-box">
+    <div class="introduction-container">
+      <h1 class="intro-hearder">Welcome to Memory Game!</h1>
+      <p class="introPara">
+        Test your memory and concentration with this fun and challenging memory game. The objective is to find matching pairs of cards as quickly as possible with the fewest moves. Are you up for the challenge?
+      </p>
+      <p class="introPara">Click "Start Game" to begin. Here's how to play:</p>
+      <ul><!-- Changed from <ol> to <ul> -->
+        <li class="introPoints">Click on a card to reveal its image.</li>
+        <li class="introPoints">Click on another card to reveal its image.</li>
+        <li class="introPoints">If the two cards match, they will stay face up.</li>
+        <li class="introPoints">If the two cards do not match, they will flip back face down.</li>
+        <li class="introPoints">Your goal is to match all the pairs with the fewest moves and in the shortest time.</li>
+      </ul>
+    </div>
+    <!-- Add a button to go back to the previous page -->
+    <div class="button-container">
+      <button class="intro-back-btn" id="instructions">Back</button>
+    </div>
+  </div>
+  <script>
+    // Add a click event listener to the "Back" button
+    const instructionsButton = document.getElementById('instructions');
+    instructionsButton.addEventListener('click', () => {
+      // Redirect to the method.html page for detailed instructions
+      window.location.href = 'method.html';
+    });
+  </script>
+</body>
+</html>

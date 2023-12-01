@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Results</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .results-box {
+      background-color: #088F8F;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+    }
+
+    .results-container {
+      
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-row-gap: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Display results in a box -->
+  <div class="results-box">
+    <div class="results-container">
+      <p id="moves-result">Moves: Loading...</p>
+      <p id="time-result">Time: Loading...</p>
+    </div>
+    <!-- Add a button to go back to the home page -->
+    <button id="back-to-home">Back to Home</button>
+  </div>
+  <script>
+    // Retrieve results from Local Storage
+    const storedResults = localStorage.getItem('gameResults');
+    if (storedResults) {
+      const gameResults = JSON.parse(storedResults);
+
+      // Display results
+      const movesResult = document.getElementById('moves-result');
+      const timeResult = document.getElementById('time-result');
+
+      movesResult.textContent = `Moves: ${gameResults.moves}`;
+      timeResult.textContent = `Time: ${gameResults.time}`;
+    } else {
+      // Handle the case when no results are found in Local Storage
+      
+      movesResult.textContent = "No results found.";
+      timeResult.textContent = "No results found.";
+    }
+
+    // Add a click event listener to the "Back to Home" 
+    const backToHomeButton = document.getElementById('back-to-home');
+    backToHomeButton.addEventListener('click', () => {
+      // Redirect to the home page 
+      window.location.href = 'home.html';
+    });
+  </script>
+</body>
+</html>
